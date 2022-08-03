@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests" tests="18" assertions="13" errors="9" warnings="0" failures="7" skipped="0" time="0.519163">
+    <testsuite name="Tests\Feature\ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php" tests="5" assertions="3" errors="3" warnings="0" failures="1" skipped="0" time="0.279653">
+      <testcase name="test_article_post" class="Tests\Feature\ArticleTest" classname="Tests.Feature.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php" line="16" assertions="1" time="0.196561">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Feature\ArticleTest::test_article_post
+Expected response status code [201] but received 302.
+
+The following errors occurred during the request:
+
+The title must be at least 30 characters.
+
+Failed asserting that 201 is identical to 302.
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php:24</failure>
+      </testcase>
+      <testcase name="test_articles_get" class="Tests\Feature\ArticleTest" classname="Tests.Feature.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php" line="53" assertions="2" time="0.041825"/>
+      <testcase name="test_by_id_get" class="Tests\Feature\ArticleTest" classname="Tests.Feature.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php" line="61" assertions="0" time="0.013901">
+        <error type="ErrorException">Tests\Feature\ArticleTest::test_by_id_get
+ErrorException: Attempt to read property "id" on null
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php:65</error>
+      </testcase>
+      <testcase name="test_by_id_update" class="Tests\Feature\ArticleTest" classname="Tests.Feature.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php" line="72" assertions="0" time="0.014210">
+        <error type="ErrorException">Tests\Feature\ArticleTest::test_by_id_update
+ErrorException: Attempt to read property "id" on null
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php:76</error>
+      </testcase>
+      <testcase name="test_by_id_delete" class="Tests\Feature\ArticleTest" classname="Tests.Feature.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php" line="85" assertions="0" time="0.013155">
+        <error type="ErrorException">Tests\Feature\ArticleTest::test_by_id_delete
+ErrorException: Attempt to read property "id" on null
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Feature/ArticleTest.php:89</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="Tests\Unit\ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" tests="13" assertions="10" errors="6" warnings="0" failures="6" skipped="0" time="0.239509">
+      <testcase name="test_article_post" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="21" assertions="1" time="0.027447">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Unit\ArticleTest::test_article_post
+Expected response status code [201] but received 422.
+
+The following errors occurred during the request:
+
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "title": [
+            "The title must be at least 30 characters."
+        ]
+    }
+}
+
+Failed asserting that 201 is identical to 422.
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:26</failure>
+      </testcase>
+      <testcase name="test_articles_get" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="31" assertions="2" time="0.019328"/>
+      <testcase name="test_article_post_title_empty" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="43" assertions="1" time="0.016200">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Unit\ArticleTest::test_article_post_title_empty
+Expected response status code [400] but received 422.
+
+The following errors occurred during the request:
+
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "title": [
+            "The title field is required."
+        ]
+    }
+}
+
+Failed asserting that 400 is identical to 422.
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:49</failure>
+      </testcase>
+      <testcase name="test_article_post_content_empty" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="54" assertions="1" time="0.017680">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Unit\ArticleTest::test_article_post_content_empty
+Expected response status code [400] but received 422.
+
+The following errors occurred during the request:
+
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "title": [
+            "The title must be at least 30 characters."
+        ],
+        "content": [
+            "The content field is required."
+        ]
+    }
+}
+
+Failed asserting that 400 is identical to 422.
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:60</failure>
+      </testcase>
+      <testcase name="test_article_post_author_empty" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="65" assertions="1" time="0.025954">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Unit\ArticleTest::test_article_post_author_empty
+Expected response status code [400] but received 422.
+
+The following errors occurred during the request:
+
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "title": [
+            "The title must be at least 30 characters."
+        ],
+        "author": [
+            "The author field is required."
+        ]
+    }
+}
+
+Failed asserting that 400 is identical to 422.
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:71</failure>
+      </testcase>
+      <testcase name="test_article_post_publish_at_empty" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="76" assertions="1" time="0.016649">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Unit\ArticleTest::test_article_post_publish_at_empty
+Expected response status code [400] but received 422.
+
+The following errors occurred during the request:
+
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "title": [
+            "The title must be at least 30 characters."
+        ],
+        "published_at": [
+            "The published at field is required."
+        ]
+    }
+}
+
+Failed asserting that 400 is identical to 422.
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:82</failure>
+      </testcase>
+      <testcase name="test_article_get_by_id_not_found" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="87" assertions="1" time="0.019278">
+        <error type="TypeError">Tests\Unit\ArticleTest::test_article_get_by_id_not_found
+TypeError: Cannot access offset of type string on string
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:91</error>
+      </testcase>
+      <testcase name="test_article_update_by_id_not_found" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="94" assertions="1" time="0.019750">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">Tests\Unit\ArticleTest::test_article_update_by_id_not_found
+Expected response status code [404] but received 422.
+
+The following errors occurred during the request:
+
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "title": [
+            "The title must be at least 30 characters."
+        ]
+    }
+}
+
+Failed asserting that 404 is identical to 422.
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/vendor/laravel/framework/src/Illuminate/Testing/TestResponse.php:177
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:99</failure>
+      </testcase>
+      <testcase name="test_article_update_content_empty" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="104" assertions="0" time="0.015824">
+        <error type="ErrorException">Tests\Unit\ArticleTest::test_article_update_content_empty
+ErrorException: Attempt to read property "id" on null
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:110</error>
+      </testcase>
+      <testcase name="test_article_update_author_empty" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="117" assertions="0" time="0.014829">
+        <error type="ErrorException">Tests\Unit\ArticleTest::test_article_update_author_empty
+ErrorException: Attempt to read property "id" on null
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:123</error>
+      </testcase>
+      <testcase name="test_article_update_publish_at_empty" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="128" assertions="0" time="0.014344">
+        <error type="ErrorException">Tests\Unit\ArticleTest::test_article_update_publish_at_empty
+ErrorException: Attempt to read property "id" on null
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:134</error>
+      </testcase>
+      <testcase name="test_article_delete_not_found" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="139" assertions="1" time="0.017817">
+        <error type="ErrorException">Tests\Unit\ArticleTest::test_article_delete_not_found
+ErrorException: Undefined array key "errMsg"
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:145</error>
+      </testcase>
+      <testcase name="test_article_delete" class="Tests\Unit\ArticleTest" classname="Tests.Unit.ArticleTest" file="/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php" line="148" assertions="0" time="0.014410">
+        <error type="ErrorException">Tests\Unit\ArticleTest::test_article_delete
+ErrorException: Attempt to read property "id" on null
+
+/home/asterisks/projects/f4e3c2ba-ef22-45dc-a83c-0f00cd830ca6/tests/Unit/ArticleTest.php:152</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

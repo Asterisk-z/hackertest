@@ -10,17 +10,12 @@ use Validator;
 
 class ArticleController extends Controller
 {
-    public function create(Request $request)
+    public function create(ArticleRequest $request)
     {
-        $data = $request->validate([
-            "title" => "required|min:30",
-            "content" => "required|string",
-            "author" => "required|string",
-            "category" => "required|string",
-            "published_at" => "required|date",
-        ]);
+        $data = $request->validated();
+        
         $article = Article::create($data);
-        return response($article, 201);
+        return response()->json($data, 201);
     }
 
     public function getAll()
@@ -35,15 +30,9 @@ class ArticleController extends Controller
         return response($article, 200);
     }
 
-    public function update(Request $request, $articleId)
+    public function update(ArticleRequest $request, $articleId)
     {
-        $data = $request->validate([
-            "title" => "required|min:30",
-            "content" => "required|string",
-            "author" => "required|string",
-            "category" => "required|string",
-            "published_at" => "required|date",
-        ]);
+        $data = $request->validated();
         $article = Article::where('id', $articleId)->firstOrFail()->update($data);
         return response($article, 200);
     }
